@@ -13,10 +13,10 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
             transform.position += Vector3.right;
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
             transform.position += Vector3.left;
 
         if (Input.GetKey(KeyCode.UpArrow))
@@ -24,8 +24,8 @@ public class movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.DownArrow))
             transform.position += Vector3.back;
-        Input.GetKey
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        if (Input.GetKey(KeyCode.Space))
             transform.position = new Vector3(0, 0.5f, 0);
     }
 }
