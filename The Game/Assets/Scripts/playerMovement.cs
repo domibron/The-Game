@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovementScript : MonoBehaviour
+public class playerMovement : MonoBehaviour
 {
+
     public CharacterController controller;
 
     public float speed = 12f;
@@ -15,17 +16,13 @@ public class playerMovementScript : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 verlocity;
-    bool isGrounded;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool isGrounded;
 
     // Update is called once per frame
     void Update()
     {
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && verlocity.y < 0)
@@ -48,6 +45,5 @@ public class playerMovementScript : MonoBehaviour
         verlocity.y += gravity * Time.deltaTime;
 
         controller.Move(verlocity * Time.deltaTime);
-
     }
 }
