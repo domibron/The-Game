@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:The Game/Assets/Scripts/playerMovementScript.cs.meta
+guid: e1b099fef22560f4f8098a1b0a8669be
+=======
+guid: 0c5a5be942f0a75429bfa179c5c8f748
+>>>>>>> 39a5bf9959bd95d81c61a28f420c8b0a3b241c43:The Game/Assets/Scripts/mouseLook.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
