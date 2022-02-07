@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Windows;
 
 public class thre : MonoBehaviour
 {
+    
+    
+
+    
+
+    bool toad = false;
 
     private Text Mytext = null;
 
@@ -14,6 +21,8 @@ public class thre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var prefabimage = Resources.Load("Main/prefabs/Image");  
+
         var prefabtext = Resources.Load("Main/prefabs/Text");
 
         GameObject Text_object = (GameObject)Instantiate(prefabtext, new Vector3(0, 0, 0), Quaternion.identity);
@@ -47,6 +56,10 @@ public class thre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (toad == false) return;
+
+        
+
         
     }
 
@@ -55,6 +68,15 @@ public class thre : MonoBehaviour
         Text btntext = Mybutton.GetComponentInChildren<Text>();
 
         btntext.text = "Changed Text";
+
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Additive);
+
+        
+
+        toad = true;
+
+        gameObject.SetActive(false);
+        
     }
 
 }
